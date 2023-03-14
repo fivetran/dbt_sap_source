@@ -12,6 +12,8 @@ models:
 
 vars:
   sap_source:
+    mara: "{{ source('sap','mara') }}"
+    ska1: "{{ source('sap','ska1') }}"
 
 clean-targets:
   - target
