@@ -12,8 +12,13 @@ models:
 
 vars:
   sap_source:
+    bkpf: "{{ source('sap','bkpf') }}"
+    bseg: "{{ source('sap','bseg') }}"
+    faglflexa: "{{ source('sap','faglflexa') }}"
+    faglflext: "{{ source('sap','faglflext') }}"
     mara: "{{ source('sap','mara') }}"
     ska1: "{{ source('sap','ska1') }}"
+    t001: "{{ source('sap','t001') }}"
 
 clean-targets:
   - target
