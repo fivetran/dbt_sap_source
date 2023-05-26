@@ -7,4 +7,10 @@ vars:
   sap_source:
     sap_schema: sap_source_integration_tests
 
+dispatch:
+  - macro_namespace: dbt_utils
+    search_order: ['spark_utils', 'dbt_utils']
+
+
     # Seed Data
+
