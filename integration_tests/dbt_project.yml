@@ -4,13 +4,20 @@ profile: 'integration_tests'
 config-version: 2
 
 vars:
+  sap_schema: sap_source_integration_tests
   sap_source:
-    sap_schema: sap_source_integration_tests
+    sap_bkpf_identifier: "sap_bkpf_data"
+    sap_bseg_identifier: "sap_bseg_data"
+    sap_faglflexa_identifier: "sap_faglflexa_data"
+    sap_faglflext_identifier: "sap_faglflext_data"
+    sap_mara_identifier: "sap_mara_data"
+    sap_ska1_identifier: "sap_ska1_data"
+    sap_t001_identifier: "sap_t001_data"
 
 dispatch:
   - macro_namespace: dbt_utils
     search_order: ['spark_utils', 'dbt_utils']
 
 
-    # Seed Data
+# Seed Data
 
