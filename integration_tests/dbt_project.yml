@@ -18,6 +18,40 @@ dispatch:
   - macro_namespace: dbt_utils
     search_order: ['spark_utils', 'dbt_utils']
 
+seeds:
+  sap_source_integration_tests:
+    +column_types:
+      _fivetran_rowid: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
+      _fivetran_synced: timestamp
+    sap_bkpf_data:
+      +column_types:
+        aedat: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
+        awkey: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
+        belnr: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
+        bldat: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
+        budat: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
+        cpudt: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
+        cputm: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
+        reindat: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
+        stodt: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
+        upddt: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
+        wwert: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
+    sap_faglflexa_data:
+      +column_types:
+        belnr: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
+        budat: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
+        docln: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
+        docnr: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
+        racct: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
+        timestamp: numeric
+    sap_faglflext_data:
+      +column_types:
+        belnr: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
+        budat: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
+        docln: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
+        docnr: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
+        racct: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
+        timestamp: numeric
 
 # Seed Data
 
