@@ -1,5 +1,5 @@
 
-with faglflexa as (
+with base as (
 
     select * 
     from {{ ref('stg_sap__faglflexa_tmp') }}

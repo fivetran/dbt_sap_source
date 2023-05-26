@@ -1,4 +1,4 @@
-with faglflext as (
+with base as (
 
     select * 
     from {{ ref('stg_sap__faglflext_tmp') }}

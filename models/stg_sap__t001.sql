@@ -1,4 +1,4 @@
-with t001 as (
+with base as (
 
     select * 
     from {{ ref('stg_sap__t001_tmp') }}
