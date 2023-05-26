@@ -5,5 +5,10 @@ sources:
     schema: "{{ var('sap_schema', 'sap') }}"
     database: "{% if target.type != 'spark' %}{{ var('sap_database', target.database) }}{% endif %}"
     tables:
-      - name: ska1
+      - name: bkpf
+      - name: bseg
+      - name: faglflexa
+      - name: faglflext
       - name: mara
+      - name: ska1
+      - name: t001
