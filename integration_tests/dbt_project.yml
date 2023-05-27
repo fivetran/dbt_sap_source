@@ -78,6 +78,7 @@ seeds:
         fwzuz: numeric
         hwbas: numeric
         hwzus: numeric
+        hwzuz: numeric
         klibt: numeric
         kzbtr: numeric
         kursr: numeric
@@ -110,7 +111,7 @@ seeds:
         rewrt: numeric 
         rewwr: numeric
         sctax: numeric
-        sfkbt: numeric
+        skfbt: numeric
         sknto: numeric
         sknt2: numeric
         sknt3: numeric
@@ -251,9 +252,4 @@ seeds:
         ntgew: numeric
         volto: numeric
         volum: numeric
-        wesch: numeric 
-
-    sap_ska1_data:
-      +column_types:
-        
-
+        wesch: numeric
