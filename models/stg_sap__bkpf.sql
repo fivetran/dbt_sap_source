@@ -20,6 +20,7 @@ final as (
 
     select 
         bukrs,
+        belnr,
         blart,
         bldat,
         monat,
@@ -35,7 +36,13 @@ final as (
         awsys,
         ldgrp,
         kursf,
-        xreorg
+        xreorg,
+        mandt,
+        gjahr
+            on bkpf.mandt = bseg.mandt
+        and bkpf.bukrs = bseg.bukrs
+        and bkpf.belnr = bseg.belnr
+        and bkpf.gjahr = bseg.gjahr
     from fields
 )
 
