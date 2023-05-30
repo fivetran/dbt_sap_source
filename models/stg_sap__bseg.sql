@@ -37,7 +37,7 @@ final as (
         kostl,
         maber,
         madat,
-        mandt,
+        cast(mandt as {{ dbt.type_string() }}) as mandt,
         mansp,
         manst,
         mschl,
