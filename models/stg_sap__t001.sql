@@ -19,11 +19,11 @@ fields as (
 final as (
 
     select
-        mandt,
+        cast(mandt as {{ dbt.type_string() }}) as mandt,
         waers,
         periv,
-        ktopl,
-        bukrs
+        ktopl, 
+        cast(bukrs as {{ dbt.type_string() }}) as bukrs
     from fields
 )
 

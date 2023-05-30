@@ -19,10 +19,10 @@ fields as (
 final as (
 
     select 
-        bukrs,
-        belnr,
+        cast(bukrs as {{ dbt.type_string() }}) as bukrs,
+        cast(belnr as {{ dbt.type_string() }}) as belnr,
         blart,
-        bldat,
+        bldat,cd 
         monat,
         cpudt,
         xblnr,
@@ -37,8 +37,8 @@ final as (
         ldgrp,
         kursf,
         xreorg,
-        mandt,
-        gjahr
+        cast(mandt as {{ dbt.type_string() }}) as mandt,
+        cast(gjahr as {{ dbt.type_string() }}) as gjahr
     from fields
 )
 
