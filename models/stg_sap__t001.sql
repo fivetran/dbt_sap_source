@@ -19,9 +19,11 @@ fields as (
 final as (
 
     select
+        mandt,
         waers,
         periv,
-        ktopl
+        ktopl,
+        bukrs
     from fields
 )
 
