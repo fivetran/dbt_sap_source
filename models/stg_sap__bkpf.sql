@@ -39,10 +39,6 @@ final as (
         xreorg,
         mandt,
         gjahr
-            on bkpf.mandt = bseg.mandt
-        and bkpf.bukrs = bseg.bukrs
-        and bkpf.belnr = bseg.belnr
-        and bkpf.gjahr = bseg.gjahr
     from fields
 )
 
