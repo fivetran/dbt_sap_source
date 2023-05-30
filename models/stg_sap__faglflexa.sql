@@ -62,7 +62,7 @@ final as (
         buzei,
         bschl,
         bstat,
-        timestamp,
+        faglflexa_timestamp,
         _fivetran_synced
     from fields
 )

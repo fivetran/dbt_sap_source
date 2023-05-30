@@ -46,7 +46,7 @@
     {"name": "scntr", "datatype": dbt.type_string()},
     {"name": "segment", "datatype": dbt.type_string()},
     {"name": "sfarea", "datatype": dbt.type_string()},
-    {"name": "timestamp", "datatype": dbt.type_numeric()},
+    {"name": "timestamp", "datatype": dbt.type_numeric(), "alias": "faglflexa_timestamp"},
     {"name": "tsl", "datatype": dbt.type_numeric()},
     {"name": "usnam", "datatype": dbt.type_string()},
     {"name": "wsl", "datatype": dbt.type_numeric()},

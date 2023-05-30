@@ -125,7 +125,7 @@ final as (
         osl14,
         osl15,
         osl16,
-        timestamp,
+        faglflext_timestamp,
         _fivetran_rowid,
         _fivetran_deleted,
         _fivetran_synced

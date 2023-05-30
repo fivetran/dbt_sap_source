@@ -109,7 +109,7 @@
     {"name": "scntr", "datatype": dbt.type_string()},
     {"name": "segment", "datatype": dbt.type_string()},
     {"name": "sfarea", "datatype": dbt.type_string()},
-    {"name": "timestamp", "datatype": dbt.type_numeric()},
+    {"name": "timestamp", "datatype": dbt.type_numeric(), "alias": "faglflext_timestamp"},
     {"name": "tsl01", "datatype": dbt.type_numeric()},
     {"name": "tsl02", "datatype": dbt.type_numeric()},
     {"name": "tsl03", "datatype": dbt.type_numeric()},
