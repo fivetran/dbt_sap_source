@@ -22,7 +22,7 @@ final as (
         cast(bukrs as {{ dbt.type_string() }}) as bukrs,
         cast(belnr as {{ dbt.type_string() }}) as belnr,
         blart,
-        bldat,cd 
+        bldat,
         monat,
         cpudt,
         xblnr,
