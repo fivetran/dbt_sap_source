@@ -19,7 +19,6 @@ fields as (
 final as (
 
     select 
-        belnr,
         bukrs,
         blart,
         bldat,
@@ -35,7 +34,8 @@ final as (
         hwae3,
         awsys,
         ldgrp,
-        kursf
+        kursf,
+        xreorg
     from fields
 )
 
