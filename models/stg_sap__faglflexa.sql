@@ -17,7 +17,7 @@ fields as (
     from base
 ),
 
-final as (
+final as (   
 
     select
         ryear,
@@ -35,6 +35,7 @@ final as (
         logsys,
         racct,
         cost_elem,
+        rclnt,
         rcntr,
         prctr,
         rfarea,
