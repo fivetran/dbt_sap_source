@@ -19,6 +19,7 @@ fields as (
 final as (
 
     select 
+        belnr,
         bukrs,
         blart,
         bldat,
