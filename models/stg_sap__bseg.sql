@@ -17,7 +17,7 @@ fields as (
 ),
 
 final as (
-    
+
     select
         anln1,
         anln2,
@@ -26,6 +26,7 @@ final as (
         augdt,
         belnr,
         bukrs,
+        buzei,
         ebeln,
         ebelp,
         eten2, 
