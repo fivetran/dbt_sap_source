@@ -5,7 +5,7 @@
 ## 📣 What does this dbt package do?
 This package is designed to enrich your Fivetran SAP data by doing the following:
 
-- Cleans, tests, and prepares your SAP data from [Fivetran's connector](https://fivetran.com/docs/applications/sap) for analysis.
+- Cleans, tests, and prepares your SAP data from [Fivetran's connector](https://fivetran.com/docs/databases/sap-erp/sap-erp-hana) for analysis.
 - Add descriptions to tables and columns that are synced using Fivetran.
 - Add freshness tests to source data.
 - Add column-level testing where applicable. For example, all primary keys are tested for uniqueness and non-null values.
