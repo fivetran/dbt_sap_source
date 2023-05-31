@@ -22,7 +22,7 @@ final as (
     select
         ryear,
         docnr,
-        rldnr,
+        cast(rldnr as {{ dbt.type_string() }}) as rldnr,
         cast(rbukrs as {{ dbt.type_string() }}) as rbukrs,
         docln,
         activ,

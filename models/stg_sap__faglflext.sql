@@ -37,7 +37,7 @@ final as (
         rtcur,
         runit,
         awtyp,
-        rldnr,
+        cast(rldnr as {{ dbt.type_string() }}) as rldnr,
         rrcty,
         rvers,
         logsys,
