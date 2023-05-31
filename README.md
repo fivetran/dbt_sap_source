@@ -12,7 +12,7 @@
 
 # SAP Source dbt Package ([Docs](https://fivetran.github.io/dbt_sap_source/))
 # 📣 What does this dbt package do?
-- Materializes [SAP staging tables](https://fivetran.github.io/dbt_sap_source/#!/overview/sap_source/models/?g_v=1&g_e=seeds) which leverage data in the format described by [this ERD](https://fivetran.com/docs/applications/sap-business-bydesign#schemainformation). These staging tables clean, test, and prepare your SAP data from [Fivetran's connector](https://fivetran.com/docs/applications/sap-business-bydesign) for analysis by doing the following:
+- Materializes [SAP staging tables](https://fivetran.github.io/dbt_sap_source/#!/overview/sap_source/models/?g_v=1&g_e=seeds), which clean, test, and prepare your SAP data from [Fivetran's connector](https://fivetran.com/docs/databases/sap-erp/sap-erp-hana) for analysis by doing the following:
   - Name columns for consistency across all packages and for easier analysis
   - Adds freshness tests to source data
   - Adds column-level testing where applicable. For example, all primary keys are tested for uniqueness and non-null values.
@@ -23,16 +23,21 @@
 ## Step 1: Prerequisites
 To use this dbt package, you must have the Fivetran **SAP** (sap.com) the respective tables to your destination:
 ### SAP.com
+- bkpf
+- bseg
+- faglflexa
+- faglflext
 - mara
 - ska1
+- t001
 
 ## Step 2: Install the package
-Include the following sap_source package version in your `packages.yml` file.
+If you  are **not** using the [SAP transformation package](https://github.com/fivetran/dbt_sap), include the following sap_source package version in your `packages.yml` file. 
 > TIP: Check [dbt Hub](https://hub.getdbt.com/) for the latest installation instructions or [read the dbt docs](https://docs.getdbt.com/docs/package-management) for more information on installing packages.
 ```yaml
 packages:
   - package: fivetran/sap_source
-    version: [">=0.1.0", "<0.2.0"]
+    version: [">=0.1.0", "<0.2.0"]  # we recommend using ranges to capture non-breaking changes automatically
 ```
 
 ## Step 3: Define database and schema variables
@@ -101,4 +106,4 @@ We highly encourage and welcome contributions to this package. Check out [this d
 # 🏪 Are there any resources available?
 - If you have questions or want to reach out for help, please refer to the [GitHub Issue](https://github.com/fivetran/dbt_sap_source/issues/new/choose) section to find the right avenue of support for you.
 - If you would like to provide feedback to the dbt package team at Fivetran or would like to request a new dbt package, fill out our [Feedback Form](https://www.surveymonkey.com/r/DQ7K7WW).
-- Have questions or want to just say hi? Book a time during our office hours [on Calendly](https://calendly.com/fivetran-solutions-team/fivetran-solutions-team-office-hours) or email us at solutions@fivetran.com.
+- Submit any questions you have about our packages [in our Fivetran dbt community](https://community.fivetran.com/t5/user-group-for-dbt/gh-p/dbt-user-group) so our Engineering team can provide guidance as quickly as possible!
