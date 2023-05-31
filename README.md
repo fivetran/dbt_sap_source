@@ -35,9 +35,9 @@ To use this dbt package, you must have the Fivetran **SAP** (sap.com) the respec
 If you  are **not** using the [SAP transformation package](https://github.com/fivetran/dbt_sap), include the following sap_source package version in your `packages.yml` file. 
 > TIP: Check [dbt Hub](https://hub.getdbt.com/) for the latest installation instructions or [read the dbt docs](https://docs.getdbt.com/docs/package-management) for more information on installing packages.
 ```yaml
-packages:
-  - package: fivetran/sap_source
-    version: [">=0.1.0", "<0.2.0"]  # we recommend using ranges to capture non-breaking changes automatically
+- git: https://github.com/fivetran/dbt_sap_source.git 
+  revision: main
+  warn-unpinned: false
 ```
 
 ## Step 3: Define database and schema variables
@@ -91,7 +91,7 @@ packages:
       version: [">=0.4.0", "<0.5.0"]
 
     - package: dbt-labs/dbt_utils
-      version: [">=1.0.0", "<2.0.0"]
+      version: [">=1.3.0", "<2.0.0"]
 
     - package: dbt-labs/spark_utils
       version: [">=0.3.0", "<0.4.0"]
