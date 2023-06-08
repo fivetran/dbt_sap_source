@@ -23,7 +23,10 @@ final as (
         waers,
         periv,
         ktopl, 
-        cast(bukrs as {{ dbt.type_string() }}) as bukrs
+        cast(bukrs as {{ dbt.type_string() }}) as bukrs,
+        land1, 
+        kkber,
+        rcomp
     from fields
 )
 

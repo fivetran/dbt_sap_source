@@ -4,6 +4,10 @@ sources:
   - name: sap
     schema: "{{ var('sap_schema', 'sap') }}"
     database: "{% if target.type != 'spark' %}{{ var('sap_database', target.database) }}{% endif %}"
+    
+    loader: fivetran
+    loaded_at_field: _fivetran_synced
+
     tables:
       - name: bkpf
         identifier: "{{ var('sap_bkpf_identifier', 'bkpf')}}"
@@ -13,6 +17,10 @@ sources:
         identifier: "{{ var('sap_faglflexa_identifier', 'faglflexa')}}"
       - name: faglflext
         identifier: "{{ var('sap_faglflext_identifier', 'faglflext')}}"
+      - name: kna1
+        identifier: "{{ var('sap_kna1_identifier', 'kna1')}}"
+      - name: lfa1
+        identifier: "{{ var('sap_kna1_identifier', 'lfa1')}}"
       - name: mara
         identifier: "{{ var('sap_mara_identifier', 'mara')}}"
       - name: ska1

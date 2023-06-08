@@ -9,13 +9,14 @@ models:
     +materialized: table
     +schema: stg_sap
 
-
 vars:
   sap_source:
     bkpf: "{{ source('sap','bkpf') }}"
     bseg: "{{ source('sap','bseg') }}"
     faglflexa: "{{ source('sap','faglflexa') }}"
     faglflext: "{{ source('sap','faglflext') }}"
+    lfa1: "{{ source('sap','lfa1') }}"
+    kna1: "{{ source('sap','kna1') }}"
     mara: "{{ source('sap','mara') }}"
     ska1: "{{ source('sap','ska1') }}"
     t001: "{{ source('sap','t001') }}"
