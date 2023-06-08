@@ -380,193 +380,364 @@ models:
         description: UTC Timestamp in short form (YYYYMMDDhhmmss)
 
   - name: stg_sap__faglflext
-    description: 
+    description: General Ledger (Totals)
     columns:
       - name: drcrk
-      - name: objnr00
+        description: Debit/credit indicator
+      - name: objnr00 
+        description: Object number for table group
       - name: objnr01
+        description: Object number for table group
       - name: objnr02
+        description: Object number for table group
       - name: objnr03
+        description: Object number for table group
       - name: objnr04
+        description: Object number for table group
       - name: objnr05
+        description: Object number for table group
       - name: objnr06
+        description: Object number for table group
       - name: objnr07
+        description: Object number for table group
       - name: objnr08
+        description: Object number for table group
       - name: rclnt
+        description: Client
       - name: rpmax
+        description: Period
       - name: ryear
+        description: Fiscal year
       - name: activ
+        description: FI-SL business transaction
       - name: rmvct
+        description: Transaction type
       - name: rtcur
+        description: Currency key
       - name: runit
+        description: Base unit of measure
       - name: awtyp
+        description: Reference transaction
       - name: rldnr
+        description: Ledger in general ledger accounting
       - name: rrcty
+        description: Record type
       - name: rvers
+        description: Version
       - name: logsys
+        description: Logical system
       - name: racct
+        description: Account number
       - name: cost_elem
+        description: Cost element
       - name: rbukrs
+        description: Company code
       - name: rcntr
+        description: Cost center
       - name: prctr
+        description: Profit center
       - name: rfarea
+        description: Functional area
       - name: rbusa
+        description: Business area
       - name: kokrs
+        description: Controlling area
       - name: segment
+        description: Segment for segmental reporting
       - name: zzspreg
+        description: Special region
       - name: scntr
+        dsecription: Sender cost center
       - name: pprctr
+        description: Partner profit center
       - name: sfarea
+        description: Partner functional area
       - name: sbusa
+        description: Trading partner's business area
       - name: rassc
+        description: Company id of trading partner
       - name: psegment
+        description: Partner segment for segmental reporting
       - name: hslvt
-      - name: hsl01
-      - name: hsl02
-      - name: hsl03
-      - name: hsl04
-      - name: hsl05
-      - name: hsl06
-      - name: hsl07
-      - name: hsl08
-      - name: hsl09
-      - name: hsl10
-      - name: hsl11
-      - name: hsl12
-      - name: hsl13
-      - name: hsl14
-      - name: hsl15
-      - name: hsl16
+        description: Balance carried forward in local currency
+      - name: hsl01 
+        description: Total of transactions of the period in local currency
+      - name: hsl02 
+        description: Total of transactions of the period in local currency
+      - name: hsl03 
+        description: Total of transactions of the period in local currency
+      - name: hsl04 
+        description: Total of transactions of the period in local currency
+      - name: hsl05 
+        description: Total of transactions of the period in local currency
+      - name: hsl06 
+        description: Total of transactions of the period in local currency
+      - name: hsl07 
+        description: Total of transactions of the period in local currency
+      - name: hsl08 
+        description: Total of transactions of the period in local currency
+      - name: hsl09 
+        description: Total of transactions of the period in local currency
+      - name: hsl10 
+        description: Total of transactions of the period in local currency
+      - name: hsl11 
+        description: Total of transactions of the period in local currency
+      - name: hsl12 
+        description: Total of transactions of the period in local currency
+      - name: hsl13 
+        description: Total of transactions of the period in local currency
+      - name: hsl14 
+        description: Total of transactions of the period in local currency
+      - name: hsl15 
+        description: Total of transactions of the period in local currency
+      - name: hsl16 
+        description: Total of transactions of the period in local currency
       - name: tslvt
-      - name: tsl01
+        description: Balance carried forward in transaction currency
+      - name: tsl01 
+        description: Total of transactions of the period in transaction currency
       - name: tsl02
+        description: Total of transactions of the period in transaction currency
       - name: tsl03
+        description: Total of transactions of the period in transaction currency
       - name: tsl04
+        description: Total of transactions of the period in transaction currency
       - name: tsl05
+        description: Total of transactions of the period in transaction currency
       - name: tsl06
+        description: Total of transactions of the period in transaction currency
       - name: tsl07
+        description: Total of transactions of the period in transaction currency
       - name: tsl08
+        description: Total of transactions of the period in transaction currency
       - name: tsl09
+        description: Total of transactions of the period in transaction currency
       - name: tsl10
+        description: Total of transactions of the period in transaction currency
       - name: tsl11
+        description: Total of transactions of the period in transaction currency
       - name: tsl12
+        description: Total of transactions of the period in transaction currency
       - name: tsl13
+        description: Total of transactions of the period in transaction currency
       - name: tsl14
+        description: Total of transactions of the period in transaction currency
       - name: tsl15
+        description: Total of transactions of the period in transaction currency
       - name: tsl16
+        description: Total of transactions of the period in transaction currency
       - name: kslvt
-      - name: ksl01
-      - name: ksl02
-      - name: ksl03
-      - name: ksl04
-      - name: ksl05
-      - name: ksl06
-      - name: ksl07
-      - name: ksl08
-      - name: ksl09
-      - name: ksl10
-      - name: ksl11
-      - name: ksl12
-      - name: ksl13
-      - name: ksl14
-      - name: ksl15
-      - name: ksl16
+        description: Balance carried forward in group currency
+      - name: ksl01 
+        description: Total of transactions of the period in group currency 
+      - name: ksl02 
+        description: Total of transactions of the period in group currency
+      - name: ksl03 
+        description: Total of transactions of the period in group currency
+      - name: ksl04 
+        description: Total of transactions of the period in group currency
+      - name: ksl05 
+        description: Total of transactions of the period in group currency
+      - name: ksl06 
+        description: Total of transactions of the period in group currency
+      - name: ksl07 
+        description: Total of transactions of the period in group currency
+      - name: ksl08 
+        description: Total of transactions of the period in group currency
+      - name: ksl09 
+        description: Total of transactions of the period in group currency
+      - name: ksl10 
+        description: Total of transactions of the period in group currency
+      - name: ksl11 
+        description: Total of transactions of the period in group currency
+      - name: ksl12 
+        description: Total of transactions of the period in group currency
+      - name: ksl13 
+        description: Total of transactions of the period in group currency
+      - name: ksl14 
+        description: Total of transactions of the period in group currency
+      - name: ksl15 
+        description: Total of transactions of the period in group currency
+      - name: ksl16 
+        description: Total of transactions of the period in group currency
       - name: oslvt
-      - name: osl01
-      - name: osl02
-      - name: osl03
-      - name: osl04
-      - name: osl05
-      - name: osl06
-      - name: osl07
-      - name: osl08
-      - name: osl09
-      - name: osl10
-      - name: osl11
-      - name: osl12
-      - name: osl13
-      - name: osl14
-      - name: osl15
-      - name: osl16
+        description: Balance carried forward in fourth currency
+      - name: osl01 
+        description: Total transactions for the period in the fourth currency
+      - name: osl02 
+        description: Total transactions for the period in the fourth currency
+      - name: osl03 
+        description: Total transactions for the period in the fourth currency
+      - name: osl04 
+        description: Total transactions for the period in the fourth currency
+      - name: osl05 
+        description: Total transactions for the period in the fourth currency
+      - name: osl06 
+        description: Total transactions for the period in the fourth currency
+      - name: osl07 
+        description: Total transactions for the period in the fourth currency
+      - name: osl08 
+        description: Total transactions for the period in the fourth currency
+      - name: osl09 
+        description: Total transactions for the period in the fourth currency
+      - name: osl10 
+        description: Total transactions for the period in the fourth currency
+      - name: osl11 
+        description: Total transactions for the period in the fourth currency
+      - name: osl12 
+        description: Total transactions for the period in the fourth currency
+      - name: osl13 
+        description: Total transactions for the period in the fourth currency
+      - name: osl14 
+        description: Total transactions for the period in the fourth currency
+      - name: osl15 
+        description: Total transactions for the period in the fourth currency
+      - name: osl16 
+        description: Total transactions for the period in the fourth currency
       - name: faglflext_timestamp
-      - name: _fivetran_rowid
-      - name: _fivetran_deleted
-      - name: _fivetran_synced
+        description: UTC timestamp in short form (YYYYMMDDhhmmss)
 
   - name: stg_sap__kna1
-    description: 
+    description: General Data in Customer Master
     columns:
       - name: mandt
+        description: Client
       - name: kunnr
+        description: Customer number
       - name: brsch
+        description: Industry key
       - name: ktokd
+        description: Customer account group
       - name: kukla
+        description: Customer classification
       - name: land1
+        description: Country key
       - name: lifnr
+        description: Account number of vendor or creditor
       - name: loevm
+        description: Central deletion flag for master record
       - name: name1
+        description: Name 1
       - name: name2
+        description: Name 2
       - name: name3
+        description: Name 3
       - name: niels
+        description: Nielsen ID
       - name: ort01
+        description: City
       - name: ort02
+        description: District
       - name: periv
+        description: Fiscal year variant
       - name: pfach
+        description: PO Box
       - name: pfort
+        description: PO Box city
       - name: pstl2
+        description: PO Box postal code
       - name: pstlz
+        description: Postal code
       - name: regio
+        description: Regional market
       - name: counc
+        description: County code
       - name: sortl
+        description: Sort field
       - name: spras
+        description: Language key
       - name: stcd1
+        description: Tax number 1
       - name: stcd2
+        description: Tax number 2
       - name: stcd3
+        description: Tax number 3 
       - name: stras
+        description: House number and street
       - name: telf1
+        description: First telephone number
       - name: telfx
+        description: Fax number
       - name: xcpdk
+        description: Indictoar (Is the account a one-time account?)
       - name: vbund
+        description: Company id of trading partner
       - name: dear6
-      - name: bran1
+        description: Indicator (Consumer)
+      - name: bran1 
+        description: Industry code 1 
       - name: bran2
+        description: Industry code 2
       - name: bran3
+        description: Industry code 3
       - name: bran4
+        description: Industry code 4
       - name: bran5
+        description: Industry code 5
       - name: abrvw
+        description: Usage indicator
       - name: werks
+        description: Plant
 
   - name: stg_sap__lfa1
     description: 
     columns:
       - name: mandt
+        description: Client
       - name: lifnr
+        description: Account number of vendor or creditor
       - name: brsch
+        description: Industry key
       - name: ktokk
+        description: Vendor account group
       - name: land1
+        description: Country key
       - name: loevm
+        description: Central deletion flag for master record
       - name: name1
+        description: Name 1
       - name: name2
+        description: Name 2
       - name: name3
-      - name: ort01
-      - name: ort02
-      - name: pfach
-      - name: pstl2
-      - name: pstlz
-      - name: regio
-      - name: sortl
-      - name: spras
-      - name: stcd1
-      - name: stcd2
-      - name: stcd3
-      - name: stras
-      - name: telf1
-      - name: telfx
-      - name: xcpdk
-      - name: vbund
-      - name: kraus
-      - name: pfort
+        description: Name 3
+      - name: ort01 
+        description: City
+      - name: ort02 
+        description: District
+      - name: pfach 
+        description: PO Box
+      - name: pstl2 
+        description: P.O. Box postal code
+      - name: pstlz 
+        description: Postal code
+      - name: regio 
+        description: Region (State, province, county)
+      - name: sortl 
+        description: Sort field
+      - name: spras 
+        description: Language key
+      - name: stcd1 
+        description: Tax number 1
+      - name: stcd2 
+        description: Tax number 2
+      - name: stcd3 
+        description: Tax number 3
+      - name: stras 
+        description: Street and house number
+      - name: telf1 
+        description: First telephone number
+      - name: telfx 
+        description: Fax number
+      - name: xcpdk 
+        description: Indicator (is the account a one-time account?)
+      - name: vbund 
+        description: Company id of trading partner
+      - name: kraus 
+        description: Credit information number
+      - name: pfort 
+        description: PO box city
       - name: werks 
+        description: Plant
 
   - name: stg_sap__mara
     description: General material data 
@@ -823,9 +994,6 @@ models:
         description: Generic material with logistical variants
       - name: nsnid
         description: NATO item identification number
-      - name: _fivetran_rowid
-      - name: _fivetran_deleted
-      - name: _fivetran_synced
 
   - name: stg_sap__ska1
     description: G/L Account Master (Chart of Accounts)
@@ -864,9 +1032,6 @@ models:
         description: Functional area
       - name: mustr
         description: Number of the sample account
-      - name: _fivetran_rowid
-      - name: _fivetran_deleted
-      - name: _fivetran_synced
 
   - name: stg_sap__t001
     description: Company codes
@@ -887,4 +1052,3 @@ models:
         description: Credit control area
       - name: rcomp
         description: Company
-
