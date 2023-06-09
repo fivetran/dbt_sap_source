@@ -380,7 +380,7 @@ models:
         description: UTC Timestamp in short form (YYYYMMDDhhmmss)
 
   - name: stg_sap__faglflext
-    description: General Ledger (Totals)
+    description: General ledger (Totals)
     columns:
       - name: drcrk
         description: Debit/credit indicator
@@ -680,7 +680,7 @@ models:
         description: Plant
 
   - name: stg_sap__lfa1
-    description: 
+    description: Vendor master (General section)
     columns:
       - name: mandt
         description: Client
@@ -740,7 +740,7 @@ models:
         description: Plant
 
   - name: stg_sap__mara
-    description: General material data 
+    description: General material data
     columns:
       - name: mandt
         description: Client
