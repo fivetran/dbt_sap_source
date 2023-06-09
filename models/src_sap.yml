@@ -611,7 +611,7 @@ sources:
 
       - name: kna1
         identifier: "{{ var('sap_kna1_identifier', 'kna1')}}"
-        description: 
+        description: General Data in Customer Master
         columns:
           - name: mandt
             description: Client
