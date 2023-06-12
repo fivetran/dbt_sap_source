@@ -201,7 +201,7 @@ seeds:
         zfbdt: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}" 
         zolld: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}" 
         zuonr: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
-        
+
     sap_faglflexa_data:
       +column_types:
         belnr: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
