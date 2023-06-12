@@ -43,7 +43,7 @@ seeds:
         kursx: numeric
         kur2x: numeric
         kur3x: numeric
-        kzkrs: numeric 
+        kzkrs: numeric
         reindat: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
         stodt: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
         txkrs: numeric
@@ -56,13 +56,13 @@ seeds:
         absbt: numeric
         agzei: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
         altkt: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
-        anfae: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"  
+        anfae: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
         anfbj: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
         aplzl: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
         aufpl: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
-        augcp: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}" 
-        augdt: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}" 
-        auggj: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}" 
+        augcp: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
+        augdt: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
+        auggj: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
         bdiff: numeric
         bdif2: numeric
         bdif3: numeric
@@ -73,8 +73,8 @@ seeds:
         bpmng: numeric
         bschl: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
         bualt: numeric
-        bukrs: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}" 
-        buzei: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}" 
+        bukrs: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
+        buzei: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
         bzdat: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
         dabrz: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
         disbj: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
@@ -95,14 +95,14 @@ seeds:
         dtws2: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
         dtws3: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
         dtws4: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
-        ebelp: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}" 
+        ebelp: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
         erfmg: numeric
         eten2: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
         fdtag: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}" 
         fdwbt: numeric
         fipos: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}" 
         fkber: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}" 
-        fkber_long: 
+        fkber_long: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}" 
         fkont: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
         fmxdocln: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
         fmxyear: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
@@ -115,7 +115,7 @@ seeds:
         hwbas: numeric
         hwzus: numeric
         hwzuz: numeric
-        kblpos: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}" 
+        kblpos: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
         klibt: numeric
         kokrs: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
         kostl: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
@@ -126,7 +126,7 @@ seeds:
         lokkt: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
         madat: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
         mandt: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
-        manst: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}" 
+        manst: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
         menge: numeric
         mwst2: numeric
         mwst3: numeric
