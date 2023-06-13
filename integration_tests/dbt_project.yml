@@ -166,7 +166,7 @@ seeds:
         rdiff: numeric
         rdif2: numeric
         rdif3: numeric
-        rewrt: numeric 
+        rewrt: numeric
         rewwr: numeric
         rfzei: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
         rpacq: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
@@ -195,11 +195,11 @@ seeds:
         zbd1p: numeric
         zbd1t: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
         zbd2p: numeric
-        zbd2t: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}" 
-        zbd3t: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}" 
-        zekkn: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}" 
-        zfbdt: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}" 
-        zolld: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}" 
+        zbd2t: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
+        zbd3t: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
+        zekkn: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
+        zfbdt: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
+        zolld: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
         zuonr: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
 
     sap_faglflexa_data:
@@ -234,7 +234,7 @@ seeds:
         docln: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
         docnr: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
         hslvt: numeric
-        hsl01: numeric 
+        hsl01: numeric
         hsl02: numeric
         hsl03: numeric
         hsl04: numeric
@@ -249,7 +249,7 @@ seeds:
         hsl13: numeric
         hsl14: numeric
         hsl15: numeric
-        hsl16: numeric        
+        hsl16: numeric       
         kokrs: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
         kslvt: numeric
         ksl01: numeric
@@ -261,7 +261,7 @@ seeds:
         ksl07: numeric
         ksl08: numeric
         ksl09: numeric
-        ksl10: numeric 
+        ksl10: numeric
         ksl11: numeric
         ksl12: numeric
         ksl13: numeric

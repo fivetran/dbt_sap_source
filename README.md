@@ -27,6 +27,8 @@ To use this dbt package, you must have the Fivetran **SAP** (sap.com) the respec
 - bseg
 - faglflexa
 - faglflext
+- kna1
+- lfa1
 - mara
 - ska1
 - t001
