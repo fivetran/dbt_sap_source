@@ -1010,6 +1010,15 @@ sources:
           - name: nsnid
             description: NATO item identification number
 
+      - name: pa0000
+      - name: pa0001
+      - name: pa0007
+      - name: pa0008
+      - name: pa0031
+      - name: t503
+
+      - name: t880
+
       - name: ska1
         identifier: "{{ var('sap_ska1_identifier', 'ska1')}}"
         description: G/L Account Master (Chart of Accounts)

@@ -26,7 +26,9 @@ final as (
         cast(bukrs as {{ dbt.type_string() }}) as bukrs,
         land1, 
         kkber,
-        rcomp
+        rcomp,
+        butxt,
+        spras
     from fields
 )
 

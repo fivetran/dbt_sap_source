@@ -13,6 +13,7 @@ vars:
     sap_lfa1_identifier: "sap_lfa1_data"
     sap_kna1_identifier: "sap_kna1_data"
     sap_mara_identifier: "sap_mara_data"
+    sap_pa0000_identifier: "sap_pa0000_data"
     sap_ska1_identifier: "sap_ska1_data"
     sap_t001_identifier: "sap_t001_data"
 
