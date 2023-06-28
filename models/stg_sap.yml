@@ -995,6 +995,928 @@ models:
       - name: nsnid
         description: NATO item identification number
 
+  - name: stg_sap__pa0000
+    description: HR master record--infotype 0000 (Actions)
+    columns:
+      - name: mandt
+        description: Client
+      - name: pernr
+        description: Personnel number
+      - name: subty
+        description: Subtype
+      - name: objps
+        description: Object identification
+      - name: sprps
+        description: Lock indicator for HR master data record
+      - name: begda
+        description: Start date
+      - name: endda
+        description: End date
+      - name: seqnr
+        description: Number of infotype record with same key
+      - name: aedtm
+        description: Last changed on
+      - name: flag1
+        description: Reserved field/Unused field
+      - name: flag2
+        description: Reserved field/Unused field
+      - name: flag3
+        description: Reserved field/Unused field
+      - name: flag4
+        description: Reserved field/Unused field
+      - name: grpvl
+        description: Grouping value for personnel assignments
+      - name: histo
+        description: Historical record flag
+      - name: itbld
+        description: Infotype screen control
+      - name: itxex
+        description: Text exists for infotype
+      - name: massg
+        description: Reason for action
+      - name: massn
+        description: Action type
+      - name: ordex
+        description: Confirmation fields exist
+      - name: preas
+        description: Reason for changing master data
+      - name: refex
+        description: Reference fields exist (primary/secondary costs)
+      - name: rese1
+        description: Reserved field/unused field of length 2
+      - name: rese2
+        description: Reserved field/unused field of length 2
+      - name: stat1
+        description: Customer-specific status
+      - name: stat2
+        description: Employment status
+      - name: stat3
+        description: Special payment status
+      - name: uname
+        description: Name of person who changed object
+
+  - name: stg_sap__pa0001
+    description: HR master record--infotype 0001 (org. assignment)
+    columns:
+      - name: mandt
+        description: Client
+      - name: pernr
+        description: Personnel number
+      - name: subty
+        description: Subtype
+      - name: objps
+        description: Object identification
+      - name: sprps
+        description: Lock indicator for HR master data record
+      - name: begda
+        description: Start date
+      - name: endda
+        description: End date
+      - name: seqnr
+        description: Number of infotype record with same key
+      - name: abkrs
+        description: Payroll area
+      - name: aedtm
+        description: Changed on
+      - name: ansvh
+        description: Work contract
+      - name: btrtl
+        description: Personnel subarea
+      - name: budget_pd
+        description: FM--Budget period
+      - name: bukrs
+        description: Company code
+      - name: ename
+        description: Formatted name of employee or applicant
+      - name: fistl
+        description: Funds center
+      - name: fkber
+        description: Functional area
+      - name: flag1
+        description: Reserved field/unused field
+      - name: flag2
+        description: Reserved field/unused field 
+      - name: flag3
+        description: Reserved field/unused field 
+      - name: flag4
+        description: Reserved field/unused field 
+      - name: geber
+        description: Fund
+      - name: grant_nbr
+        description: Grant
+      - name: grpvl
+        description: Grouping value for personnel assignments
+      - name: gsber
+        description: Business area
+      - name: histo
+        description: Historical record flag
+      - name: itbld
+        description: Infotype screen control
+      - name: itxex
+        description: Text exists for infotype
+      - name: juper
+        description: Legal person
+      - name: kokrs
+        description: Controlling area
+      - name: kostl
+        description: Cost center
+      - name: mstbr
+        description: Supervisor area
+      - name: ordex
+        description: Confirmation fields exist
+      - name: orgeh
+        description: Organizational unit
+      - name: otype
+        description: Object type
+      - name: persg
+        description: Employee group
+      - name: persk
+        description: Employee subgroup
+      - name: plans
+        description: Position
+      - name: preas
+        description: Reason for changing master data
+      - name: refex
+        description: Reference fields exist (primary/secondary costs)
+      - name: rese1
+        description: Reserved field/unused field of length 2
+      - name: rese2
+        description: Reserved field/unused field of length 2
+      - name: sacha
+        description: Payroll administrator
+      - name: sachp
+        description: Administrator for HR master data
+      - name: sachz
+        description: Administrator for time recording
+      - name: sbmod
+        description: Administrator group
+      - name: sgmnt
+        description: Segment for segmental reporting
+      - name: sname
+        description: Employee's name (Sortable by LAST NAME FIRST NAME)
+      - name: stell
+        description: Job
+      - name: uname
+        description: Name of person who changed object
+      - name: vdsk1
+        description: Organizational key
+      - name: werks
+        description: Personnel area
+
+  - name: stg_sap__pa0007
+    description: HR master record--infotype 0007 (planned working time)
+    columns:
+      - name: mandt
+        description: Client
+      - name: pernr
+        description: Personnel number
+      - name: subty
+        description: Subtype
+      - name: objps
+        description: Object identification
+      - name: sprps
+        description: Lock indicator for HR master data record
+      - name: begda
+        description: Start date
+      - name: endda
+        description: End date
+      - name: seqnr
+        description: Number of infotype record with same key
+      - name: aedtm
+        description: Changed on
+      - name: arbst
+        description: Daily working hours
+      - name: awtyp
+        description: Reference transaction
+      - name: dysch
+        description: Create daily work schedule dynamically
+      - name: empct
+        description: Employment percentage
+      - name: flag1
+        description: Reserved field/unused field
+      - name: flag2
+        description: Reserved field/unused field 
+      - name: flag3
+        description: Reserved field/unused field
+      - name: flag4
+        description: Reserved field/unused field
+      - name: grpvl
+        description: Grouping value for personnel assignments
+      - name: histo
+        description: Historical record flag
+      - name: itbld
+        description: Infotype screen control
+      - name: itxex
+        description: Text exists for infotype
+      - name: jrstd
+        description: Annual working hours
+      - name: kztim
+        description: Additional indicator for time management
+      - name: maxja
+        description: Maximum number of working hours per year
+      - name: maxmo
+        description: Maximum number of work hours per month
+      - name: maxta
+        description: Maximum number of work hours per day
+      - name: maxwo
+        description: Maximum number of work hours per week
+      - name: minja
+        description: Minimum annual working hours
+      - name: minmo
+        description: Minimum number of work hours per month
+      - name: minta
+        description: Minimum number of work hours per day
+      - name: minwo
+        description: Minimum weekly working hours
+      - name: mostd
+        description: Monthly hours
+      - name: ordex
+        description: Confirmation fields exist
+      - name: preas
+        description: Reason for changing master data
+      - name: refex
+        description: Reference fields exist (primary/secondary costs)
+      - name: rese1
+        description: Reserved field/unused field of length 2
+      - name: rese2
+        description: Reserved field/unused field of length 2 
+      - name: schkz
+        description: Work schedule rule
+      - name: teilk
+        description: Indicator part-time employee 
+      - name: uname
+        description: Name of person who changed objects
+      - name: wkwdy
+        description: Weekly workdays
+      - name: wostd
+        description: Hours per week
+      - name: wweek
+        description: Working week
+      - name: zterf
+        description: Employee time management status
+
+  - name: stg_sap__pa0008
+    description: HR master record--infotype 0008 (basic pay)
+    columns:
+      - name: mandt
+        description: Client
+      - name: pernr
+        description: Personnel number
+      - name: subty
+        description: Subtype
+      - name: objps
+        description: Object identification
+      - name: sprps
+        description: Lock indicator for HR master data record
+      - name: begda
+        description: Start date
+      - name: endda
+        description: End date
+      - name: seqnr
+        description: Number of infotype record with same key
+      - name: aedtm
+        description: Changed on
+      - name: ancur
+        description: Currency key for annual salary
+      - name: ansal
+        description: Annual salary
+      - name: anz01
+        description: Number
+      - name: anz02
+        description: Number
+      - name: anz03
+        description: Number
+      - name: anz04
+        description: Number
+      - name: anz05
+        description: Number 
+      - name: anz06
+        description: Number
+      - name: anz07
+        description: Number
+      - name: anz08
+        description: Number
+      - name: anz09
+        description: Number
+      - name: anz10
+        description: Number
+      - name: anz11
+        description: Number
+      - name: anz12
+        description: Number
+      - name: anz13
+        description: Number
+      - name: anz14
+        description: Number
+      - name: anz15
+        description: Number
+      - name: anz16
+        description: Number
+      - name: anz17
+        description: Number
+      - name: anz18
+        description: Number
+      - name: anz19
+        description: Number
+      - name: anz20
+        description: Number
+      - name: anz21
+        description: Number
+      - name: anz22
+        description: Number
+      - name: anz23
+        description: Number
+      - name: anz24
+        description: Number
+      - name: anz25
+        description: Number
+      - name: anz26
+        description: Number
+      - name: anz27
+        description: Number
+      - name: anz28
+        description: Number
+      - name: anz29
+        description: Number
+      - name: anz30
+        description: Number
+      - name: anz31
+        description: Number
+      - name: anz32
+        description: Number
+      - name: anz33
+        description: Number
+      - name: anz34
+        description: Number
+      - name: anz35
+        description: Number
+      - name: anz36
+        description: Number
+      - name: anz37
+        description: Number
+      - name: anz38
+        description: Number
+      - name: anz39
+        description: Number
+      - name: anz40
+        description: Number
+      - name: bet01
+        description: Wage type amount for payments
+      - name: bet02
+        description: Wage type amount for payments
+      - name: bet03
+        description: Wage type amount for payments
+      - name: bet04
+        description: Wage type amount for payments
+      - name: bet05
+        description: Wage type amount for payments
+      - name: bet06
+        description: Wage type amount for payments
+      - name: bet07
+        description: Wage type amount for payments
+      - name: bet08
+        description: Wage type amount for payments
+      - name: bet09
+        description: Wage type amount for payments
+      - name: bet10
+        description: Wage type amount for payments
+      - name: bet11
+        description: Wage type amount for payments
+      - name: bet12
+        description: Wage type amount for payments
+      - name: bet13
+        description: Wage type amount for payments
+      - name: bet14
+        description: Wage type amount for payments
+      - name: bet15
+        description: Wage type amount for payments
+      - name: bet16
+        description: Wage type amount for payments
+      - name: bet17
+        description: Wage type amount for payments
+      - name: bet18
+        description: Wage type amount for payments
+      - name: bet19
+        description: Wage type amount for payments
+      - name: bet20
+        description: Wage type amount for payments
+      - name: bet21
+        description: Wage type amount for payments
+      - name: bet22
+        description: Wage type amount for payments
+      - name: bet23
+        description: Wage type amount for payments
+      - name: bet24
+        description: Wage type amount for payments 
+      - name: bet25
+        description: Wage type amount for payments
+      - name: bet26
+        description: Wage type amount for payments
+      - name: bet27
+        description: Wage type amount for payments
+      - name: bet28
+        description: Wage type amount for payments
+      - name: bet29
+        description: Wage type amount for payments
+      - name: bet30
+        description: Wage type amount for payments
+      - name: bet31
+        description: Wage type amount for payments
+      - name: bet32
+        description: Wage type amount for payments
+      - name: bet33
+        description: Wage type amount for payments
+      - name: bet34
+        description: Wage type amount for payments
+      - name: bet35
+        description: Wage type amount for payments
+      - name: bet36
+        description: Wage type amount for payments
+      - name: bet37
+        description: Wage type amount for payments
+      - name: bet38
+        description: Wage type amount for payments
+      - name: bet39
+        description: Wage type amount for payments
+      - name: bet40
+        description: Wage type amount for payments
+      - name: bsgrd
+        description: Capacity utilization level
+      - name: cpind
+        description: Planned compensation type
+      - name: divgv
+        description: Working hours per payroll period
+      - name: ein01
+        description: Time/measurement unit
+      - name: ein02
+        description: Time/measurement unit
+      - name: ein03
+        description: Time/measurement unit
+      - name: ein04
+        description: Time/measurement unit
+      - name: ein05
+        description: Time/measurement unit
+      - name: ein06
+        description: Time/measurement unit
+      - name: ein07
+        description: Time/measurement unit
+      - name: ein08
+        description: Time/measurement unit
+      - name: ein09
+        description: Time/measurement unit
+      - name: ein10
+        description: Time/measurement unit
+      - name: ein11
+        description: Time/measurement unit
+      - name: ein12
+        description: Time/measurement unit 
+      - name: ein13
+        description: Time/measurement unit
+      - name: ein14
+        description: Time/measurement unit
+      - name: ein15
+        description: Time/measurement unit
+      - name: ein16
+        description: Time/measurement unit
+      - name: ein17
+        description: Time/measurement unit
+      - name: ein18
+        description: Time/measurement unit
+      - name: ein19
+        description: Time/measurement unit
+      - name: ein20
+        description: Time/measurement unit
+      - name: ein21
+        description: Time/measurement unit
+      - name: ein22
+        description: Time/measurement unit
+      - name: ein23
+        description: Time/measurement unit
+      - name: ein24
+        description: Time/measurement unit
+      - name: ein25
+        description: Time/measurement unit
+      - name: ein26
+        description: Time/measurement unit
+      - name: ein27
+        description: Time/measurement unit
+      - name: ein28
+        description: Time/measurement unit
+      - name: ein29
+        description: Time/measurement unit
+      - name: ein30
+        description: Time/measurement unit
+      - name: ein31
+        description: Time/measurement unit
+      - name: ein32
+        description: Time/measurement unit
+      - name: ein33
+        description: Time/measurement unit
+      - name: ein34
+        description: Time/measurement unit
+      - name: ein35
+        description: Time/measurement unit
+      - name: ein36
+        description: Time/measurement unit 
+      - name: ein37
+        description: Time/measurement unit
+      - name: ein38
+        description: Time/measurement unit
+      - name: ein39
+        description: Time/measurement unit
+      - name: ein40
+        description: Time/measurement unit
+      - name: falgk
+        description: Case group catalog
+      - name: falgr
+        description: Case group
+      - name: flag1
+        description: Reserved field/unused field
+      - name: flag2
+        description: Reserved field/unused field
+      - name: flag3
+        description: Reserved field/unused field
+      - name: flag4
+        description: Reserved field/unused field
+      - name: flaga
+        description: General flag
+      - name: grpvl
+        description: Grouping value for personnel assignments
+      - name: histo
+        description: Historical record flag
+      - name: ind01
+        description: Indicator for indirect valuation
+      - name: ind02
+        description: Indicator for indirect valuation
+      - name: ind03
+        description: Indicator for indirect valuation
+      - name: ind04
+        description: Indicator for indirect valuation
+      - name: ind05
+        description: Indicator for indirect valuation
+      - name: ind06
+        description: Indicator for indirect valuation
+      - name: ind07
+        description: Indicator for indirect valuation
+      - name: ind08
+        description: Indicator for indirect valuation
+      - name: ind09
+        description: Indicator for indirect valuation
+      - name: ind10
+        description: Indicator for indirect valuation
+      - name: ind11
+        description: Indicator for indirect valuation
+      - name: ind12
+        description: Indicator for indirect valuation
+      - name: ind13
+        description: Indicator for indirect valuation
+      - name: ind14
+        description: Indicator for indirect valuation
+      - name: ind15
+        description: Indicator for indirect valuation
+      - name: ind16
+        description: Indicator for indirect valuation
+      - name: ind17
+        description: Indicator for indirect valuation
+      - name: ind18
+        description: Indicator for indirect valuation
+      - name: ind19
+        description: Indicator for indirect valuation
+      - name: ind20
+        description: Indicator for indirect valuation
+      - name: ind21
+        description: Indicator for indirect valuation
+      - name: ind22
+        description: Indicator for indirect valuation
+      - name: ind23
+        description: Indicator for indirect valuation
+      - name: ind24
+        description: Indicator for indirect valuation
+      - name: ind25
+        description: Indicator for indirect valuation
+      - name: ind26
+        description: Indicator for indirect valuation
+      - name: ind27
+        description: Indicator for indirect valuation
+      - name: ind28
+        description: Indicator for indirect valuation
+      - name: ind29
+        description: Indicator for indirect valuation
+      - name: ind30
+        description: Indicator for indirect valuation
+      - name: ind31
+        description: Indicator for indirect valuation
+      - name: ind32
+        description: Indicator for indirect valuation
+      - name: ind33
+        description: Indicator for indirect valuation
+      - name: ind34
+        description: Indicator for indirect valuation
+      - name: ind35
+        description: Indicator for indirect valuation
+      - name: ind36
+        description: Indicator for indirect valuation
+      - name: ind37
+        description: Indicator for indirect valuation
+      - name: ind38
+        description: Indicator for indirect valuation
+      - name: ind39
+        description: Indicator for indirect valuation
+      - name: ind40
+        description: Indicator for indirect valuation
+      - name: itbld
+        description: Infotype screen control
+      - name: itxex
+        description: Text exists for infotype
+      - name: lga01
+        description: Wage type
+      - name: lga02
+        description: Wage type 
+      - name: lga03
+        description: Wage type 
+      - name: lga04
+        description: Wage type 
+      - name: lga05
+        description: Wage type 
+      - name: lga06
+        description: Wage type 
+      - name: lga07
+        description: Wage type 
+      - name: lga08
+        description: Wage type 
+      - name: lga09
+        description: Wage type 
+      - name: lga10
+        description: Wage type 
+      - name: lga11
+        description: Wage type 
+      - name: lga12
+        description: Wage type 
+      - name: lga13
+        description: Wage type 
+      - name: lga14
+        description: Wage type 
+      - name: lga15
+        description: Wage type 
+      - name: lga16
+        description: Wage type 
+      - name: lga17
+        description: Wage type 
+      - name: lga18
+        description: Wage type 
+      - name: lga19
+        description: Wage type 
+      - name: lga20
+        description: Wage type 
+      - name: lga21
+        description: Wage type 
+      - name: lga22
+        description: Wage type 
+      - name: lga23
+        description: Wage type 
+      - name: lga24
+        description: Wage type 
+      - name: lga25
+        description: Wage type 
+      - name: lga26
+        description: Wage type 
+      - name: lga27
+        description: Wage type 
+      - name: lga28
+        description: Wage type 
+      - name: lga29
+        description: Wage type 
+      - name: lga30
+        description: Wage type 
+      - name: lga31
+        description: Wage type 
+      - name: lga32
+        description: Wage type 
+      - name: lga33
+        description: Wage type 
+      - name: lga34
+        description: Wage type 
+      - name: lga35
+        description: Wage type 
+      - name: lga36
+        description: Wage type 
+      - name: lga37
+        description: Wage type 
+      - name: lga38
+        description: Wage type 
+      - name: lga39
+        description: Wage type 
+      - name: lga40
+        description: Wage type 
+      - name: opk01
+        description: Operation indicator for wage types
+      - name: opk02
+        description: Operation indicator for wage types 
+      - name: opk03
+        description: Operation indicator for wage types 
+      - name: opk04
+        description: Operation indicator for wage types 
+      - name: opk05
+        description: Operation indicator for wage types 
+      - name: opk06
+        description: Operation indicator for wage types 
+      - name: opk07
+        description: Operation indicator for wage types 
+      - name: opk08
+        description: Operation indicator for wage types 
+      - name: opk09
+        description: Operation indicator for wage types 
+      - name: opk10
+        description: Operation indicator for wage types 
+      - name: opk11
+        description: Operation indicator for wage types 
+      - name: opk12
+        description: Operation indicator for wage types 
+      - name: opk13
+        description: Operation indicator for wage types 
+      - name: opk14
+        description: Operation indicator for wage types 
+      - name: opk15
+        description: Operation indicator for wage types 
+      - name: opk16
+        description: Operation indicator for wage types 
+      - name: opk17
+        description: Operation indicator for wage types 
+      - name: opk18
+        description: Operation indicator for wage types 
+      - name: opk19
+        description: Operation indicator for wage types 
+      - name: opk20
+        description: Operation indicator for wage types 
+      - name: opk21
+        description: Operation indicator for wage types 
+      - name: opk22
+        description: Operation indicator for wage types 
+      - name: opk23
+        description: Operation indicator for wage types 
+      - name: opk24
+        description: Operation indicator for wage types 
+      - name: opk25
+        description: Operation indicator for wage types 
+      - name: opk26
+        description: Operation indicator for wage types 
+      - name: opk27
+        description: Operation indicator for wage types 
+      - name: opk28
+        description: Operation indicator for wage types 
+      - name: opk29
+        description: Operation indicator for wage types 
+      - name: opk30
+        description: Operation indicator for wage types 
+      - name: opk31
+        description: Operation indicator for wage types 
+      - name: opk32
+        description: Operation indicator for wage types 
+      - name: opk33
+        description: Operation indicator for wage types 
+      - name: opk34
+        description: Operation indicator for wage types 
+      - name: opk35
+        description: Operation indicator for wage types 
+      - name: opk36
+        description: Operation indicator for wage types
+      - name: opk37
+        description: Operation indicator for wage types
+      - name: opk38
+        description: Operation indicator for wage types 
+      - name: opk39
+        description: Operation indicator for wage types 
+      - name: opk40
+        description: Operation indicator for wage types 
+      - name: ordex
+        description: Confirmation fields exist
+      - name: orzst
+        description: Cost of living allowance level
+      - name: partn
+        description: Partnership
+      - name: preas
+        description: Reason for changing master data
+      - name: refex
+        description: Reference fields exist (primary/secondary costs)
+      - name: rese1
+        description: Reserved field/unused field of length 2
+      - name: rese2
+        description: Reserved field/unused field of length 2
+      - name: stvor
+        description: Date of next increase
+      - name: trfar
+        description: Pay scale type
+      - name: trfgb
+        description: Pay scale area
+      - name: trfgr
+        description: Pay scale group
+      - name: trfst
+        description: Pay scale level
+      - name: uname
+        description: Name of person who changed object
+      - name: vglgb
+        description: Comparison pay scale area
+      - name: vglgr
+        description: Comparison pay scale group
+      - name: vglst
+        description: Comparison pay scale level
+      - name: vglsv
+        description: Date of next increase
+      - name: vglta
+        description: Comparison pay scale type
+      - name: waers
+        description: Currency key
+
+  - name: stg_sap__pa0031
+    description: HR master record--infotype 0031 (Reference personnel numbers)
+    columns:
+      - name: mandt
+        description: Client
+      - name: pernr
+        description: Personnel number
+      - name: subty
+        description: Subtype
+      - name: objps
+        description: Object information
+      - name: sprps
+        description: Lock indicator for HR master data record
+      - name: begda
+        description: Start date
+      - name: endda
+        description: End date
+      - name: seqnr
+        description: Number of infotype record with same key
+      - name: aedtm
+        description: Changed on
+      - name: flag1
+        description: Reserved field/unused field
+      - name: flag2
+        description: Reserved field/unused field 
+      - name: flag3
+        description: Reserved field/unused field 
+      - name: flag4
+        description: Reserved field/unused field 
+      - name: grpvl
+        description: Grouping value for personnel assignments
+      - name: histo
+        description: Historical record flag
+      - name: itbld
+        description: Infotype screen control
+      - name: itxex
+        description: Text exists for infotype
+      - name: ordex
+        description: Confirmation fields exist
+      - name: preas
+        description: Reason for changing master data
+      - name: refex
+        description: Reference fields exist
+      - name: rese1
+        description: Reserved field/unused field of length 2
+      - name: rese2
+        description: Reserved field/unused field of length 2 
+      - name: rfp01
+        description: Reference personnel number
+      - name: rfp02
+        description: Reference personnel number 
+      - name: rfp03
+        description: Reference personnel number 
+      - name: rfp04
+        description: Reference personnel number 
+      - name: rfp05
+        description: Reference personnel number 
+      - name: rfp06
+        description: Reference personnel number 
+      - name: rfp07
+        description: Reference personnel number 
+      - name: rfp08
+        description: Reference personnel number 
+      - name: rfp09
+        description: Reference personnel number 
+      - name: rfp10
+        description: Reference personnel number
+      - name: rfp11
+        description: Reference personnel number 
+      - name: rfp12
+        description: Reference personnel number
+      - name: rfp13
+        description: Reference personnel number
+      - name: rfp14
+        description: Reference personnel number
+      - name: rfp15
+        description: Reference personnel number
+      - name: rfp16
+        description: Reference personnel number
+      - name: rfp17
+        description: Reference personnel number
+      - name: rfp18
+        description: Reference personnel number 
+      - name: rfp19
+        description: Reference personnel number 
+      - name: rfp20
+        description: Reference personnel number
+      - name: uname
+        description: Name of person who changed object
+
   - name: stg_sap__ska1
     description: G/L Account Master (Chart of Accounts)
     columns:
@@ -1052,3 +1974,53 @@ models:
         description: Credit control area
       - name: rcomp
         description: Company
+      - name: butxt
+        description: Name of company code or company
+      - name: spras
+        description: Language key
+
+  - name: stg_sap__t503
+    description: Employee group/subgroup
+    columns:
+      - name: mandt
+        description: Client
+      - name: persg
+        description: Employee group 
+      - name: persk
+        description: Employee subgroup
+      - name: abart
+        description: Employee subgroup grouping for personnel calculation rule
+      - name: abtyp
+        description: Employee subgroup grouping for primary wage tpyes
+      - name: aksta
+        description: Activity status
+      - name: ansta
+        description: Employment status
+      - name: antyp
+        description: Employee category
+      - name: austa
+        description: Training status
+      - name: burkz
+        description: Employee subgroup grouping for appraisal
+      - name: inwid
+        description: Participation in incentive wages
+      - name: konty
+        description: Employee subgroup grouping for time quota types
+      - name: molga
+        description: Reserved field/unused field of length 2
+      - name: trfkz
+        description: ES grouping for collective agreement provision
+      - name: typsz
+        description: Single-character indicator
+      - name: zeity
+        description: Employee subgroup grouping for work schedules
+
+  - name: stg_sap__t880
+    description: Global company data (for KONS Ledger)
+    columns:
+      - name: mandt
+        description: Client
+      - name: rcomp
+        description: Company
+      - name: name1
+        description: Company name

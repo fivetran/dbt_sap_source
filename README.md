@@ -30,8 +30,15 @@ To use this dbt package, you must have the Fivetran **SAP** (sap.com) the respec
 - kna1
 - lfa1
 - mara
+- pa0000
+- pa0001
+- pa0007
+- pa0008
+- pa0031
 - ska1
 - t001
+- t503
+- t880
 
 ## Step 2: Install the package
 If you  are **not** using the [SAP transformation package](https://github.com/fivetran/dbt_sap), include the following sap_source package version in your `packages.yml` file. 
