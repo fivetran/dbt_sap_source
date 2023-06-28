@@ -22,7 +22,7 @@ final as (
         cast(mandt as {{ dbt.type_string() }}) as mandt,
         cast(bukrs as {{ dbt.type_string() }}) as bukrs,
         cast(belnr as {{ dbt.type_string() }}) as belnr,
-        cast(gjahr as {{ dbt.type_string() }}) as gjahr
+        cast(gjahr as {{ dbt.type_string() }}) as gjahr,
         blart,
         bldat,
         monat,
