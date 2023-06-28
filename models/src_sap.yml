@@ -693,7 +693,7 @@ sources:
             description: Plant
 
       - name: lfa1
-        identifier: "{{ var('sap_kna1_identifier', 'lfa1')}}"
+        identifier: "{{ var('sap_lfa1_identifier', 'lfa1')}}"
         description: Vendor master (General section)
         columns:
           - name: mandt
