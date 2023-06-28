@@ -3,6 +3,13 @@ version: 2
 models:
   - name: stg_sap__bkpf
     description: Accounting document header
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - mandt
+            - bukrs
+            - belnr
+            - gjahr
     columns:
       - name: mandt
         description: Client
@@ -47,6 +54,14 @@ models:
 
   - name: stg_sap__bseg
     description: Accounting document segment
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - mandt
+            - bukrs
+            - belnr
+            - gjahr
+            - buzei
     columns:
       - name: mandt
         description: Client
@@ -289,6 +304,15 @@ models:
 
   - name: stg_sap__faglflexa
     description: General ledger (Actual line items)
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - rclnt
+            - ryear
+            - docnr
+            - rldnr
+            - rbukrs
+            - docln
     columns:
       - name: ryear
         description: Fiscal year
@@ -381,6 +405,22 @@ models:
 
   - name: stg_sap__faglflext
     description: General ledger (Totals)
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - rclnt
+            - ryear
+            - objnr00
+            - objnr01
+            - objnr02
+            - objnr03
+            - objnr04
+            - objnr05
+            - objnr06
+            - objnr07
+            - objnr08
+            - drcrk
+            - rpmax
     columns:
       - name: drcrk
         description: Debit/credit indicator
@@ -599,6 +639,11 @@ models:
 
   - name: stg_sap__kna1
     description: General Data in Customer Master
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - mandt
+            - kunnr
     columns:
       - name: mandt
         description: Client
@@ -681,6 +726,11 @@ models:
 
   - name: stg_sap__lfa1
     description: Vendor master (General section)
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - mandt
+            - lifnr
     columns:
       - name: mandt
         description: Client
@@ -740,7 +790,12 @@ models:
         description: Plant
 
   - name: stg_sap__mara
-    description: General material data
+    description: General material data 
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - mandt
+            - matnr
     columns:
       - name: mandt
         description: Client
@@ -997,6 +1052,17 @@ models:
 
   - name: stg_sap__pa0000
     description: HR master record--infotype 0000 (Actions)
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - mandt
+            - pernr
+            - subty
+            - objps
+            - sprps
+            - endda
+            - begda
+            - seqnr
     columns:
       - name: mandt
         description: Client
@@ -1057,6 +1123,17 @@ models:
 
   - name: stg_sap__pa0001
     description: HR master record--infotype 0001 (org. assignment)
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - mandt
+            - pernr
+            - subty
+            - objps
+            - sprps
+            - endda
+            - begda
+            - seqnr
     columns:
       - name: mandt
         description: Client
@@ -1165,6 +1242,17 @@ models:
 
   - name: stg_sap__pa0007
     description: HR master record--infotype 0007 (planned working time)
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - mandt
+            - pernr
+            - subty
+            - objps
+            - sprps
+            - endda
+            - begda
+            - seqnr
     columns:
       - name: mandt
         description: Client
@@ -1257,6 +1345,17 @@ models:
 
   - name: stg_sap__pa0008
     description: HR master record--infotype 0008 (basic pay)
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - mandt
+            - pernr
+            - subty
+            - objps
+            - sprps
+            - endda
+            - begda
+            - seqnr
     columns:
       - name: mandt
         description: Client
@@ -1829,6 +1928,17 @@ models:
 
   - name: stg_sap__pa0031
     description: HR master record--infotype 0031 (Reference personnel numbers)
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - mandt
+            - pernr
+            - subty
+            - objps
+            - sprps
+            - endda
+            - begda
+            - seqnr
     columns:
       - name: mandt
         description: Client
@@ -1919,6 +2029,12 @@ models:
 
   - name: stg_sap__ska1
     description: G/L Account Master (Chart of Accounts)
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - mandt
+            - ktopl
+            - saknr
     columns:
       - name: mandt
         description: Client
@@ -1957,6 +2073,11 @@ models:
 
   - name: stg_sap__t001
     description: Company codes
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - mandt
+            - bukrs
     columns:
       - name: mandt
         description: Client
@@ -1981,6 +2102,12 @@ models:
 
   - name: stg_sap__t503
     description: Employee group/subgroup
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - mandt
+            - persg
+            - persk
     columns:
       - name: mandt
         description: Client
@@ -2017,6 +2144,11 @@ models:
 
   - name: stg_sap__t880
     description: Global company data (for KONS Ledger)
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - mandt
+            - rcomp
     columns:
       - name: mandt
         description: Client
