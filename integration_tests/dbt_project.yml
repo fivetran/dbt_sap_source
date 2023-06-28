@@ -385,6 +385,7 @@ seeds:
         erdat: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
         gbdat: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
         legalnat: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
+        lifnr: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
         mandt: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
         pstlz: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}"
         qssysdat: "{{ 'string' if target.name in ['bigquery','spark','databricks'] else 'varchar' }}" 
