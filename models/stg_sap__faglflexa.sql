@@ -20,6 +20,7 @@ fields as (
 final as (   
 
     select
+        cast(rclnt as {{ dbt.type_string() }}) as rclnt,
         ryear,
         docnr,
         cast(rldnr as {{ dbt.type_string() }}) as rldnr,
@@ -35,7 +36,6 @@ final as (
         logsys,
         racct,
         cost_elem,
-        cast(rclnt as {{ dbt.type_string() }}) as rclnt,
         rcntr,
         prctr,
         rfarea,

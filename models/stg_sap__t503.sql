@@ -19,6 +19,9 @@ fields as (
 final as (
 
     select    
+        mandt,
+        persg,
+        persk,
         abart,
         abtyp,
         aksta,
@@ -28,10 +31,7 @@ final as (
         burkz,
         inwid,
         konty,
-        mandt,
         molga,
-        persg,
-        persk,
         trfkz,
         typsz,
         zeity

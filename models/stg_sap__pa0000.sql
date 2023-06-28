@@ -18,10 +18,16 @@ fields as (
 
 final as (
     
-    select 
-        aedtm,
-        begda,
+    select
+        mandt,
+        pernr,
+        subty,
+        objps,
+        sprps,
         endda,
+        begda,
+        seqnr,
+        aedtm,
         flag1,
         flag2,
         flag3,
@@ -30,22 +36,16 @@ final as (
         histo,
         itbld,
         itxex,
-        mandt,
         massg,
         massn,
-        objps,
         ordex,
-        pernr,
         preas,
         refex,
         rese1,
         rese2,
-        seqnr,
-        sprps,
         stat1,
         stat2,
         stat3,
-        subty,
         uname
     from fields
 )
