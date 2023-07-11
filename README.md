@@ -23,24 +23,37 @@
 
 # 🎯 How do I use the dbt package?
 ## Step 1: Prerequisites
-To use this dbt package, you must have one of the Fivetran SAP connector options, [like LDP SAP Netweaver](https://fivetran.com/docs/local-data-processing/requirements/source-and-target-requirements/sap-netweaver-requirements), [HVA SAP ECC](https://fivetran.com/docs/databases/sap-erp/high-volume-agent/hva-sap-ecc-hana) or [SAP ERP on HANA](https://fivetran.com/docs/databases/sap-erp/sap-erp-hana)) to sync the respective tables to your destination: 
-### SAP.com
-- bkpf
-- bseg
-- faglflexa
-- faglflext
-- kna1
-- lfa1
-- mara
-- pa0000
-- pa0001
-- pa0007
-- pa0008
-- pa0031
-- ska1
-- t001
-- t503
-- t880
+To use this dbt package, you must have the following:
+- At least one Fivetran of the following SAP connectors:
+   - [LDP SAP Netweaver](https://fivetran.com/docs/local-data-processing/requirements/source-and-target-requirements/sap-netweaver-requirements)
+   - [HVA SAP ECC](https://fivetran.com/docs/databases/sap-erp/high-volume-agent/hva-sap-ecc-hana)
+   - [SAP ERP on HANA](https://fivetran.com/docs/databases/sap-erp/sap-erp-hana) 
+-  Within the connector, syncing the following respective tables into your destination:
+  - bkpf
+  - bseg
+  - faglflexa
+  - faglflext
+  - kna1
+  - lfa1
+  - mara
+  - pa0000
+  - pa0001
+  - pa0007
+  - pa0008
+  - pa0031
+  - ska1
+  - t001
+  - t503
+  - t880
+- A **BigQuery**, **Snowflake**, **Redshift**, **PostgreSQL**, **Databricks** destination.
+
+### Databricks Dispatch Configuration
+If you are using a Databricks destination with this package you will need to add the below (or a variation of the below) dispatch configuration within your `dbt_project.yml`. This is required for the package to accurately search for macros within the `dbt-labs/spark_utils` then the `dbt-labs/dbt_utils` packages respectively.
+```yml
+dispatch:
+  - macro_namespace: dbt_utils
+    search_order: ['spark_utils', 'dbt_utils']
+```
 
 ## Step 2: Install the package
 If you  are **not** using the [SAP transformation package](https://github.com/fivetran/dbt_sap), include the following sap_source package version in your `packages.yml` file. 
@@ -72,7 +85,6 @@ models:
     sap_source:
       +schema: my_new_schema_name # leave blank for just the target_schema
 ```
-</details>
     
 ### Change the source table references
 If an individual source table has a different name than the package expects, add the table name as it appears in your destination to the respective variable:
@@ -82,10 +94,8 @@ If an individual source table has a different name than the package expects, add
 vars:
     # For all SAP source tables
     sap_<default_source_table_name>_identifier: your_table_name 
-
-    # For all SAP2 source tables
-    sap2_<default_source_table_name>_identifier: your_table_name 
 ```
+</details>
 
 ## (Optional) Step 5: Orchestrate your models with Fivetran Transformations for dbt Core™
 <details><summary>Expand to view details</summary>
