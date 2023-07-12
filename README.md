@@ -3,7 +3,7 @@
         href="https://github.com/fivetran/dbt_sap_source/blob/main/LICENSE">
         <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" /></a>
     <a alt="dbt-core">
-        <img src="https://img.shields.io/badge/dbt_Core™_version->=1.0.0_<2.0.0-orange.svg" /></a>
+        <img src="https://img.shields.io/badge/dbt_Core™_version->=1.3.0_<2.0.0-orange.svg" /></a>
     <a alt="Maintained?">
         <img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" /></a>
     <a alt="PRs">
@@ -12,7 +12,9 @@
 
 # SAP Source dbt Package ([Docs](https://fivetran.github.io/dbt_sap_source/))
 # 📣 What does this dbt package do?
-- Materializes [SAP staging tables](https://fivetran.github.io/dbt_sap_source/#!/overview/sap_source/models/?g_v=1&g_e=seeds), which clean, test, and prepare your SAP data from [Fivetran's connector](https://fivetran.com/docs/databases/sap-erp/sap-erp-hana) for analysis by doing the following:
+- Materializes [SAP staging tables](https://fivetran.github.io/dbt_sap_source/#!/overview/sap_source/models/?g_v=1&g_e=seeds) that are intended to reproduce crucial source tables that funnel into important SAP reports.
+- These tables will flow up to replicate SAP extractor reports that are provided in our transformation package, while not applying any renaming to the fields.
+- These staging tables clean, test, and prepare your SAP data from [Fivetran's SAP connectors, like LDP SAP Netweaver](https://fivetran.com/docs/local-data-processing/requirements/source-and-target-requirements/sap-netweaver-requirements), [HVA SAP ECC](https://fivetran.com/docs/databases/sap-erp/high-volume-agent/hva-sap-ecc-hana) or [SAP ERP on HANA](https://fivetran.com/docs/databases/sap-erp/sap-erp-hana) for analysis by doing the following:
   - Name columns for consistency across all packages and for easier analysis
   - Adds freshness tests to source data
   - Adds column-level testing where applicable. For example, all primary keys are tested for uniqueness and non-null values.
@@ -21,23 +23,45 @@
 
 # 🎯 How do I use the dbt package?
 ## Step 1: Prerequisites
-To use this dbt package, you must have the Fivetran **SAP** (sap.com) the respective tables to your destination:
-### SAP.com
-- bkpf
-- bseg
-- faglflexa
-- faglflext
-- mara
-- ska1
-- t001
+To use this dbt package, you must have the following:
+- At least one Fivetran of the following SAP connectors:
+   - [LDP SAP Netweaver](https://fivetran.com/docs/local-data-processing/requirements/source-and-target-requirements/sap-netweaver-requirements)
+   - [HVA SAP ECC](https://fivetran.com/docs/databases/sap-erp/high-volume-agent/hva-sap-ecc-hana)
+   - [SAP ERP on HANA](https://fivetran.com/docs/databases/sap-erp/sap-erp-hana) 
+- Within the connector, syncing the following respective tables into your destination:
+   - bkpf
+   - bseg
+   - faglflexa
+   - faglflext
+   - kna1
+   - lfa1
+   - mara
+   - pa0000
+   - pa0001
+   - pa0007
+   - pa0008
+   - pa0031
+   - ska1
+   - t001
+   - t503
+   - t880
+- A **BigQuery**, **Snowflake**, **Redshift**, **PostgreSQL**, **Databricks** destination.
+
+### Databricks Dispatch Configuration
+If you are using a Databricks destination with this package you will need to add the below (or a variation of the below) dispatch configuration within your `dbt_project.yml`. This is required for the package to accurately search for macros within the `dbt-labs/spark_utils` then the `dbt-labs/dbt_utils` packages respectively.
+```yml
+dispatch:
+  - macro_namespace: dbt_utils
+    search_order: ['spark_utils', 'dbt_utils']
+```
 
 ## Step 2: Install the package
 If you  are **not** using the [SAP transformation package](https://github.com/fivetran/dbt_sap), include the following sap_source package version in your `packages.yml` file. 
 > TIP: Check [dbt Hub](https://hub.getdbt.com/) for the latest installation instructions or [read the dbt docs](https://docs.getdbt.com/docs/package-management) for more information on installing packages.
 ```yaml
-- git: https://github.com/fivetran/dbt_sap_source.git 
-  revision: main
-  warn-unpinned: false
+packages:
+  - package: fivetran/sap_source
+    version: [">=0.1.0", "<0.2.0"]
 ```
 
 ## Step 3: Define database and schema variables
@@ -49,8 +73,9 @@ vars:
     sap_schema: your_schema_name 
 ```
 
-## (Optional) Step 4: Additional configurations
-### Passing Through Additional Fields
+## (Optional) Step 4: Additional configurations 
+<details><summary>Expand to view details</summary>
+<br>
 
 ### Change the build schema
 By default, this package builds the SAP staging models within a schema titled (`<target_schema>` + `_sap_source`) in your destination. If this is not where you would like your sap staging data to be written to, add the following configuration to your root `dbt_project.yml` file:
@@ -69,10 +94,8 @@ If an individual source table has a different name than the package expects, add
 vars:
     # For all SAP source tables
     sap_<default_source_table_name>_identifier: your_table_name 
-
-    # For all SAP2 source tables
-    sap2_<default_source_table_name>_identifier: your_table_name 
 ```
+</details>
 
 ## (Optional) Step 5: Orchestrate your models with Fivetran Transformations for dbt Core™
 <details><summary>Expand to view details</summary>

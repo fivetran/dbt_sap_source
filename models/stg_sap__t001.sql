@@ -20,10 +20,15 @@ final as (
 
     select
         cast(mandt as {{ dbt.type_string() }}) as mandt,
+        cast(bukrs as {{ dbt.type_string() }}) as bukrs,
         waers,
         periv,
         ktopl, 
-        cast(bukrs as {{ dbt.type_string() }}) as bukrs
+        land1, 
+        kkber,
+        rcomp,
+        butxt,
+        spras
     from fields
 )
 

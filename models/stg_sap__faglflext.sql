@@ -19,7 +19,8 @@ fields as (
 final as (
 
     select
-        drcrk,
+        cast(rclnt as {{ dbt.type_string() }}) as rclnt,
+        ryear,
         objnr00,
         objnr01,
         objnr02,
@@ -29,9 +30,8 @@ final as (
         objnr06,
         objnr07,
         objnr08,
-        cast(rclnt as {{ dbt.type_string() }}) as rclnt,
+        drcrk,
         rpmax,
-        ryear,
         activ,
         rmvct,
         rtcur,
