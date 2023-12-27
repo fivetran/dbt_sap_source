@@ -1,5 +1,5 @@
 # dbt_sap_source v0.1.0
-# 🎉 Initial Release 🎉
+## 🎉 Initial Release 🎉
 - This is the initial release of this package. 
 
 ## 📣 What does this dbt package do?
