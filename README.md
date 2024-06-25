@@ -14,7 +14,7 @@
 # 📣 What does this dbt package do?
 - Materializes [SAP staging tables](https://fivetran.github.io/dbt_sap_source/#!/overview/sap_source/models/?g_v=1&g_e=seeds) that are intended to reproduce crucial source tables that funnel into important SAP reports.
 - These tables will flow up to replicate SAP extractor reports that are provided in our transformation package, while not applying any renaming to the fields.
-- These staging tables clean, test, and prepare your SAP data from [Fivetran's SAP connectors, like LDP SAP Netweaver](https://fivetran.com/docs/local-data-processing/requirements/source-and-target-requirements/sap-netweaver-requirements), [HVA SAP ECC](https://fivetran.com/docs/databases/sap-erp/high-volume-agent/hva-sap-ecc-hana) or [SAP ERP on HANA](https://fivetran.com/docs/databases/sap-erp/sap-erp-hana) for analysis by doing the following:
+- These staging tables clean, test, and prepare your SAP data from [Fivetran's SAP connectors, like LDP SAP Netweaver](https://fivetran.com/docs/local-data-processing/requirements/source-and-target-requirements/sap-netweaver-requirements), [HVA SAP ECC](https://fivetran.com/docs/databases/sap-erp/high-volume-agent) or [SAP ERP on HANA](https://fivetran.com/docs/databases/sap-erp/sap-erp-hana) for analysis by doing the following:
   - Name columns for consistency across all packages and for easier analysis
   - Adds freshness tests to source data
   - Adds column-level testing where applicable. For example, all primary keys are tested for uniqueness and non-null values.
@@ -26,7 +26,7 @@
 To use this dbt package, you must have the following:
 - At least one Fivetran of the following SAP connectors:
    - [LDP SAP Netweaver](https://fivetran.com/docs/local-data-processing/requirements/source-and-target-requirements/sap-netweaver-requirements)
-   - [HVA SAP ECC](https://fivetran.com/docs/databases/sap-erp/high-volume-agent/hva-sap-ecc-hana)
+   - [HVA SAP ECC](https://fivetran.com/docs/databases/sap-erp/high-volume-agent)
    - [SAP ERP on HANA](https://fivetran.com/docs/databases/sap-erp/sap-erp-hana) 
 - Within the connector, syncing the following respective tables into your destination:
    - bkpf
