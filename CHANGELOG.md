@@ -1,3 +1,8 @@
+# dbt_sap_source version.version
+
+## Documentation
+- Corrected references to connectors and connections in the README. ([#8](https://github.com/fivetran/dbt_sap_source/pull/8))
+
 
 # dbt_sap_source v0.1.0
 ## 🎉 Initial Release 🎉
