@@ -1,16 +1,18 @@
-<p align="center">
+
+# SAP Source dbt Package ([Docs](https://fivetran.github.io/dbt_sap_source/))
+
+<p align="left">
     <a alt="License"
         href="https://github.com/fivetran/dbt_sap_source/blob/main/LICENSE">
         <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" /></a>
     <a alt="dbt-core">
-        <img src="https://img.shields.io/badge/dbt_Core™_version->=1.3.0_<2.0.0-orange.svg" /></a>
+        <img src="https://img.shields.io/badge/dbt_Core™_version->=1.3.0_,<2.0.0-orange.svg" /></a>
     <a alt="Maintained?">
         <img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" /></a>
     <a alt="PRs">
         <img src="https://img.shields.io/badge/Contributions-welcome-blueviolet" /></a>
 </p>
 
-# SAP Source dbt Package ([Docs](https://fivetran.github.io/dbt_sap_source/))
 ## What does this dbt package do?
 - Materializes [SAP staging tables](https://fivetran.github.io/dbt_sap_source/#!/overview/sap_source/models/?g_v=1&g_e=seeds) that are intended to reproduce crucial source tables that funnel into important SAP reports.
 - These tables will flow up to replicate SAP extractor reports that are provided in our transformation package, while not applying any renaming to the fields.
@@ -85,11 +87,11 @@ models:
     sap_source:
       +schema: my_new_schema_name # leave blank for just the target_schema
 ```
-    
+
 #### Change the source table references
 If an individual source table has a different name than the package expects, add the table name as it appears in your destination to the respective variable:
 > IMPORTANT: See this project's [`dbt_project.yml`](https://github.com/fivetran/dbt_sap_source/blob/main/dbt_project.yml) variable declarations to see the expected names.
-    
+
 ```yml
 vars:
     # For all SAP source tables
@@ -100,7 +102,7 @@ vars:
 ### (Optional) Step 5: Orchestrate your models with Fivetran Transformations for dbt Core™
 <details><summary>Expand to view details</summary>
 <br>
-    
+
 Fivetran offers the ability for you to orchestrate your dbt project through [Fivetran Transformations for dbt Core™](https://fivetran.com/docs/transformations/dbt). Learn how to set up your project for orchestration through Fivetran in our [Transformations for dbt Core™ setup guides](https://fivetran.com/docs/transformations/dbt#setupguide).
 </details>
 
@@ -119,7 +121,7 @@ packages:
     - package: dbt-labs/spark_utils
       version: [">=0.3.0", "<0.4.0"]
 ```
-          
+
 ## How is this package maintained and can I contribute?
 ### Package Maintenance
 The Fivetran team maintaining this package _only_ maintains the latest version of the package. We highly recommend that you stay consistent with the [latest version](https://hub.getdbt.com/fivetran/sap_source/latest/) of the package and refer to the [CHANGELOG](https://github.com/fivetran/dbt_sap_source/blob/main/CHANGELOG.md) and release notes for more information on changes across versions.
